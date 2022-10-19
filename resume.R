@@ -60,12 +60,11 @@ resume$main <- resume$main |>
     no_end = is.na(end_date),
     has_start = !no_start,
     has_end = !no_end,
-    #parsed = parse_date(end_date),
     timeline = case_when(
       no_start & no_end ~ "NA",
-      no_start & !no_end ~ paste("<span>", as.character(end_date),"</span>"),
+      no_start & !no_end ~ paste(as.character(end_date)),
       !no_start & no_end ~ paste("current", "-", as.character(start_date)),
-      TRUE ~ paste("<span>", end_date,"</span><span>", start_date,"</span>")
+      TRUE ~ paste(end_date,"-", start_date)
     ) 
   ) |> 
   arrange(desc(parse_date(end_date)))
@@ -78,7 +77,20 @@ resume$main <- resume$main |>
 
 print_section <- function(section_name){
   
-  template <- ""
+  template <- "
+  ### {title}
+  
+  {institution}
+  
+  {location}
+  
+  {timeline}
+  
+  {description}
+  
+  {responsibilities}
+  
+  "
   
   tmp_data <- resume$main |> filter(section == section_name)
   
