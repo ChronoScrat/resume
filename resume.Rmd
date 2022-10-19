@@ -59,9 +59,17 @@ print_section("experience")
 ```
 
 
-Extra {data-icon=suitcase}
+Other Works {data-icon=hands-helping}
 --------------------------------------------------------------------------------
 
 ```{r, echo=FALSE}
 print_section("extra")
+```
+
+
+Awards and Certifications {data-icon=award}
+--------------------------------------------------------------------------------
+
+```{r, echo=FALSE}
+print_section("awards")
 ```
