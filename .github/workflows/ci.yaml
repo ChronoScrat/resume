@@ -20,6 +20,10 @@ jobs:
         with:
           use-public-rspm: true
       
+      - name: Install libcurl
+        run: |
+          sudo apt-get install libcurl4-openssl-dev
+      
       - name: Install dependencies
         run: |
           install.packages(c('googlesheets4','stringr','dplyr','lubridate','glue','rmarkdown','pagedown'))
