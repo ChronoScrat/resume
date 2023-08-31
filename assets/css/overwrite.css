@@ -5,3 +5,8 @@
 .aside .level2{
     margin-top: 0 !important;
 }
+
+#main{
+  padding-right: 50px !important;
+  padding-left: 0px !important;
+}
