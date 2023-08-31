@@ -12,6 +12,7 @@ jobs:
     env:
       GITHUB_PAT: $({ secrets.GITHUB_TOKEN })
       DRIVE_KEY: $({ secrets.DRIVE_KEY })
+      CRAN: "https://packagemanager.posit.co/cran/__linux__/jammy/latest"
     steps:
       - uses: actions/checkout@v2
 
@@ -27,7 +28,9 @@ jobs:
       
       - name: Install dependencies
         run: |
-          install.packages(c('googlesheets4','stringr','dplyr','lubridate','glue','rmarkdown','pagedown'))
+          options(repos = c(CRAN = 'https://packagemanager.posit.co/cran/__linux__/jammy/latest'), download.file.method = 'libcurl')
+          options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version["platform"], R.version["arch"], R.version["os"])))
+          install.packages(c('googlesheets4','stringr','dplyr','lubridate','glue','rmarkdown','pagedown','dotenv'))
         shell: Rscript {0}
 
       - name: Render document
