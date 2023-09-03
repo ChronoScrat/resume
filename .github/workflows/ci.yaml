@@ -22,6 +22,8 @@ jobs:
         with:
           use-public-rspm: true
       
+      - uses: browser-actions/setup-chrome@v1
+      
       - name: Install libcurl
         run: |
           sudo apt-get install libcurl4-openssl-dev
@@ -37,13 +39,21 @@ jobs:
         run: |
           rmarkdown::render('index.Rmd')
         shell: Rscript {0}
-
+        
+      - name: Render PDF
+        run: |
+          pagedown::chrome_print(input = 'index.html', output = 'Resume.pdf')
+        shell: Rscript {0}
+        env:
+          PAGEDOWN_CHROME: $(which chrome)
+        
       - name: Create final folder
         run: |
           mkdir output
           mv index.html output
           mv index_files output
           mv assets output
+          mv Resume.pdf output
       
       - name: Deploy to GitHub pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4

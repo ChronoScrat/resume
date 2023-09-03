@@ -69,7 +69,9 @@ resume$main <- resume$main |>
       no_start & !no_end ~ paste(as.character(end_date)),
       !no_start & no_end ~ paste("current", "-", as.character(start_date)),
       TRUE ~ paste(end_date,"-", start_date)
-    ) 
+    ),
+    description = ifelse(is.na(description),"",description),
+    responsibilities = ifelse(is.na(responsibilities),"",responsibilities)
   ) |> 
   arrange(desc(parse_date(end_date)))
 

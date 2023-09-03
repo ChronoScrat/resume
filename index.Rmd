@@ -28,8 +28,7 @@ print_contact()
 
 Skills {#skills}
 --------------------------------------------------------------------------------
-I am highly skilled in this and that. And also that. Let's fill some space in
-this text so that we may see how this renders properly.
+I am highly skilled in R, Python (including PySpark), and SQL for robust data analysis. Additionally, I possess a moderate proficiency in Docker for efficient containerization and deployment.
 
 I speak Portuguese (natively), English (Proficiently), French (Intermidiate) and
 Spanish (Basic)
