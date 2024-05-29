@@ -7,3 +7,4 @@ resume_files
 index_files
 .env
 key.json
+output/

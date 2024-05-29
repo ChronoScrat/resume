@@ -1,0 +1,77 @@
+---
+pagetitle: "Nathanael Rolim"
+output: 
+  pagedown::html_resume:
+    self_contained: false
+    pdf_mode: true
+    css: ['assets/css/resume.css', 'assets/css/overwrite.css']
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+```
+
+Aside
+================================================================================
+
+Contact Info {#contact}
+--------------------------------------------------------------------------------
+
+```{r, echo=FALSE}
+print_contact()
+```
+
+Skills {#skills}
+--------------------------------------------------------------------------------
+I am highly skilled in R, Python (including PySpark), and SQL for robust data analysis. Additionally, I possess a moderate proficiency in Docker for efficient containerization and deployment.
+
+I speak Portuguese (natively), English (Proficiently), French (Intermidiate) and
+Spanish (Basic)
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Last updated on `r Sys.Date()`.
+
+
+Main
+================================================================================
+
+Nathanael Rolim {#title}
+--------------------------------------------------------------------------------
+
+I hold a degree in International Relations from the University of São Paulo and 
+am currently engaged in the field of consumer data and insights. I possess a 
+strong analytical focus and aspire to further enhance my technical skills in data 
+analysis, particularly with respect to Spark, R, and Python.
+
+I possess a strong team-oriented disposition and firmly believe that collaboration 
+constitutes the paramount asset any team can possess in order to surmount the 
+challenges of everyday operations.
+
+
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+```{r, echo=FALSE}
+print_section("experience")
+```
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r, echo=FALSE}
+print_section("education")
+```
+
+
+Other Works {data-icon=hands-helping}
+--------------------------------------------------------------------------------
+
+```{r, echo=FALSE}
+print_section("extra")
+```
