@@ -41,3 +41,12 @@ rmarkdown::render(input = "RMD/html_resume.Rmd",
                   output_file = "index.html",
                   output_dir = "output",
                   envir = parent.frame())
+
+# Render DOCX version
+
+rmarkdown::render(input = "RMD/ats_resume.Rmd",
+                  output_file = "resume.docx",
+                  output_dir = "output",
+                  envir = parent.frame())
+
+# Render PDF version

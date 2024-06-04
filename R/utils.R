@@ -38,3 +38,32 @@ print_contact <- function() {
   
   invisible(contact)
 }
+
+# Print Section in DOCX resume
+
+print_section_docx <- function(section_name){
+  
+  tmp <- history |>
+    filter(section == section_name)
+  
+  template <- "
+  
+  <table style='width:100%;'>
+    <tr style='width:100%'>
+      <td style='width:70%'>{title}</td>
+      <td>{timeline}</td>
+    </tr>
+  </table>
+  
+  ETC ETC
+  
+  | **{title}** - {institution} | {timeline} |
+  | ----------- | :--------: |
+  | {description} | |
+  | {responsibilities} | |
+  
+  "
+  
+  print(glue::glue_data(tmp, template))
+  
+}

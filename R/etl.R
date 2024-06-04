@@ -53,6 +53,6 @@ history <- history |>
       TRUE ~ paste(as.character(end_date),"-",as.character(start_date))
     ),
     description = ifelse(is.na(description),"",description),
-    responsibilities = ifelse(is.na(responsibilities),"",description)
+    responsibilities = ifelse(is.na(responsibilities),"",responsibilities)
   ) |>
   arrange(desc(fix_date(end_date)))

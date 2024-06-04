@@ -1,0 +1,63 @@
+---
+pagetitle: "Nathanael Rolim"
+output: word_document
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+```
+
+
+Nathanael Rolim
+================================================================================
+
+```{r, echo=FALSE}
+print_contact()
+```
+
+About me
+--------------------------------------------------------------------------------
+
+I hold a degree in International Relations from the University of São Paulo and 
+am currently engaged in the field of consumer data and insights. I possess a 
+strong analytical focus and aspire to further enhance my technical skills in data 
+analysis, particularly with respect to Spark, R, and Python.
+
+I possess a strong team-oriented disposition and firmly believe that collaboration 
+constitutes the paramount asset any team can possess in order to surmount the 
+challenges of everyday operations.
+
+
+Skills
+--------------------------------------------------------------------------------
+I am highly skilled in R, Python (including PySpark), and SQL for robust data analysis. Additionally, I possess a moderate proficiency in Docker for efficient containerization and deployment.
+
+I speak Portuguese (natively), English (Proficiently), French (Intermidiate) and
+Spanish (Basic)
+
+
+Professional Experience
+--------------------------------------------------------------------------------
+
+```{r, echo=FALSE}
+print_section_docx("experience")
+```
+
+
+Education 
+--------------------------------------------------------------------------------
+
+```{r, echo=FALSE}
+print_section_docx("education")
+```
+
+
+Other Works
+--------------------------------------------------------------------------------
+
+```{r, echo=FALSE}
+print_section_docx("extra")
+```
