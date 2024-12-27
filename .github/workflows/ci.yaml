@@ -30,7 +30,7 @@ jobs:
         run: |
           options(repos = c(CRAN = 'https://packagemanager.posit.co/cran/__linux__/jammy/latest'), download.file.method = 'libcurl')
           options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version["platform"], R.version["arch"], R.version["os"])))
-          install.packages(c('googlesheets4','stringr','dplyr','lubridate','glue','rmarkdown','pagedown','dotenv'))
+          install.packages(c('googlesheets4','stringr', 'stringi','dplyr','lubridate','glue','rmarkdown','pagedown','dotenv'))
         shell: Rscript {0}
 
       - name: Render document
