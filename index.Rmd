@@ -36,7 +36,6 @@ Spanish (Basic)
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Last updated on `r Sys.Date()`.
 
 
 Main
