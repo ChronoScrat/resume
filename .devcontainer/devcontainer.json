@@ -1,0 +1,12 @@
+{
+    "name": "Fedora R Container",
+    "image": "ghcr.io/chronoscrat/fedora-r:41",
+    "workspaceFolder": "${localWorkspaceFolder}",
+    "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
+    "postStartCommand": "Rscript -e 'renv::restore()'",
+    "customizations": {
+        "vscode": {
+            "extensions": ["reditorsupport.r","rdebugger.r-debugger","ms-vscode.live-server","nefrob.vscode-just-syntax"]
+        }
+    }
+}
