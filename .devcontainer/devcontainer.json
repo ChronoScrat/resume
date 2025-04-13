@@ -4,7 +4,7 @@
     "workspaceFolder": "${localWorkspaceFolder}",
     "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
     "onCreateCommand": "dnf install -y tar node",
-    "postCreateCommand": "Rscript -e 'install.packages(\"languageserver\")'",
+    "postCreateCommand": "just devcontainer",
     "postStartCommand": "Rscript -e 'renv::restore(repos=getOption(\"repos\"))'",
     "customizations": {
         "vscode": {
