@@ -12,4 +12,10 @@ _snapshot:
 restore:
     #!/usr/bin/bash
 
-    {{rscript}} -e "renv::restore()"
+    {{rscript}} -e "renv::restore(repos=getOption('repos'))"
+
+[group('build')]
+render $file:
+    #!/usr/bin/bash
+
+    {{rscript}} -e "rmarkdown::render('${file}')"

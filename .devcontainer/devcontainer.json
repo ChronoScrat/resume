@@ -3,7 +3,9 @@
     "image": "ghcr.io/chronoscrat/fedora-r:41",
     "workspaceFolder": "${localWorkspaceFolder}",
     "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
-    "postStartCommand": "Rscript -e 'renv::restore()'",
+    "onCreateCommand": "dnf install -y tar node",
+    "postCreateCommand": "Rscript -e 'install.packages(\"languageserver\")'",
+    "postStartCommand": "Rscript -e 'renv::restore(repos=getOption(\"repos\"))'",
     "customizations": {
         "vscode": {
             "extensions": ["reditorsupport.r","rdebugger.r-debugger","ms-vscode.live-server","nefrob.vscode-just-syntax"]
